@@ -58,8 +58,11 @@ public class Main {
     }
 
     public static void multiply(int x, int m) {
-        Supplier<Integer> supplier = () -> m;
-        System.out.println(doubleUp(x, supplier));
+        System.out.println(doubleUp(x, getMultiplier(m)));
+    }
+
+    static Supplier<Integer> getMultiplier(int m) {
+        return () -> m;
     }
 
     public static void findChars(String where, char what) {
