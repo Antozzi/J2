@@ -54,8 +54,7 @@ public class Main {
 
     public static void forItemAccept() {
         Set<String> setStrings = Set.of("1", "12", "123");
-        Consumer<String> consumer = System.out::println;
-        forItem(setStrings, consumer);
+        forItem(setStrings, System.out::println);
     }
 
     public static void multiply(int x, int m) {
